@@ -1,0 +1,24 @@
+// SCSS without mixin
+// .list {
+//     padding-left: em(10);
+
+//     &__item { 
+//         padding-bottom: em(10);
+//         &--end {
+//             padding-bottom: em(0);
+//         }
+//     }
+// }
+
+// SCSS with mixin
+.list {
+    padding-left: em(10);
+
+    @include e('item') {
+        margin-bottom: em(0);
+
+        @include m('end') {
+            padding-bottom: em(0);
+        }
+    }
+}
